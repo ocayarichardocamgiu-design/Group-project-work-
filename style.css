@@ -1,0 +1,119 @@
+*{
+    font-family: sans-serif;
+    background-color: rgb(168, 168, 226);
+    margin: 5PX;
+    padding: 10PX;
+}
+header {
+    background-color: rgb(240, 216, 82);
+    color: rgb(22, 22, 21);
+    text-align: center;
+    padding: 20px;
+}
+header h1 {
+    margin-bottom: 12px;
+}
+.container {
+    width: 95%;
+    margin: 25px auto;
+}
+h2 {
+    color: brown;
+    margin-top: 30px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background-color: beige;
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+}
+.card p {
+    font-size: 20px;
+    color: aqua;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 14px;
+    margin: 6px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: blueviolet;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 5px solid #ddd;
+    padding: 14px;
+    text-align: left;
+}
+
+th {
+    background-color: aqua;
+    color: aqua;
+}
+
+button {
+    background-color: chartreuse;
+    color: crimson;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+form {
+    background-color: lawngreen;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form input, form select {
+    display: block;
+    width: 85%;
+    margin: 14px;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+}
+
+.pending {
+    color: orange;
+}
+
+.overdue {
+    color: red;
+}
+
+@media (max-width: 400px) {
+    .summary{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 90%;
+    }table {
+        font-size: 14px;
+    }
+}

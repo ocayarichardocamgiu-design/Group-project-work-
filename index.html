@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Deadline Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Academic Deadline and Assessment planner</h1>
+        <p>Manage your assessment, tests and examination.</p>
+    </header>
+    <div class="container">
+        <h2>Assessment Summary</h2>
+    <div class="summary">
+        <div class="card">
+            <h3>Total tasks</h3>
+            <p id="totalCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>upcoming Tasks</h3>
+            <p id="upcomingCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Overdue Tasks</h3>
+            <p id="overdueCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>completed Tasks</h3>
+            <p id="completedCount">0</p>
+        </div>
+    </div>
+    
+    <h2>Searh and Filter Assessment</h2>
+
+    <input type="text" id="searhInput"
+           placeholder="searh assessment or course">
+        <select id="courseFilter">
+            <option value="">All Types</option>
+            <option>Assessment</option>
+            <option>Test</option>
+            <option>Presentation</option>
+            <option>examination</option>
+        </select> 
+        
+        <select id="statusFilter">
+            <option value="">All Statuses</option>
+            <option>pending</option>
+            <option>completed</option>
+            <option>overdue</option>
+        </select>
+
+        <h2>Assessment Deadline</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Assessment</th>
+                    <th>Course</th>
+                    <th>Type</th>
+                    <th>Due Date</th>
+                    <th>Days Remaining</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="deadlineTable"></tbody>
+        </table>
+
+        <h2>Add a New Deadline</h2>
+
+        <form id="deadlineForm">
+
+            <input type="text" name="title"
+                   placeholder="AssessmentTitle" required>
+            <input type="text" name="course" placeholder="Course Name" required>      
+            <select name="type" required>
+                <option value="">Select Assessment Type</option>
+                <option>Assessment</option>
+                <option>Test</option>
+                <option>Presentation</option>
+                <option>Examination</option>
+            </select> 
+            
+            <input type="date" name="dueDate" required>
+
+            <button type="submit">Add Deadline</button>
+        </form>
+
+        <h2>upcoming Tesks</h2>
+
+        <ul id="upcomingList"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
